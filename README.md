@@ -67,3 +67,33 @@ Ahora, tienes que hacer que descomentar algunas líneas del código, para que se
         #        # With php7-fpm:
                  fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
          }
+
+Guarda y cierra el archivo oprimiendo **ctrl + x**, y luego **Y**  para guardar.
+
+Ahora escribe en la terminal
+
+        sudo visudo
+        
+       
+Y asegúrate de que se lea lo siguiente
+
+        # User privilege specification
+        root    ALL=(ALL:ALL) ALL
+        www-data    ALL=(ALL:ALL) NOPASSWD: ALL
+        
+    
+Nuevamente guarda y cierra el archivo oprimiendo **ctrl + x**, y luego **Y**  para guardar.
+Ahora vuelve a abrir la terminal y escribe los siguientes comandos.
+        
+        sudo /etc/init.d/nginx reload
+        sudo rm /var/www/html/index.nginx-debian.html
+        sudo cp Sensor-master/html/* /var/www/html/
+        sudo chown root:root /var/www/html/*
+        sudo chmod 644 /var/www/html/*
+        
+        
+Reinicia la Raspberry y escribe en la terminal
+        
+        hostname -i
+        
+Este último comando te dice la dirección IP de la Raspberry; introdúcelo al navegador web de la rasp y podrás empezar a recolectar los datos al oprimir "Empezar a tomar datos", los cuales se guardarán en un archivo .csv en la carpeta de Downloads cuando oprimas "Stop".
