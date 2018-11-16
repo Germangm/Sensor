@@ -19,11 +19,11 @@ La primera vez que inicies la Rasp, verás la siguiente pantalla, donde deberás
 ![ pantalla](https://github.com/raspberrypi/noobs/blob/master/screenshots/os_installed.png)
 
 #### Recolectar datos del sensor
-Asegúrate que después de la instalación, el Raspberry tenga la fecha y hora correcta, para evitar incongruencias en los datos recolectados, ya que el script toma el tiempo del sistema.
+Asegúrate que después de la instalación, el Raspberry tenga la fecha y hora correcta, para evitar incongruencias en los datos recolectados, ya que el script toma el tiempo del sistema.Prende el sensor por primera vez y conéctate con la apicación de AirCasting; selecciona "Mobile Session". Asegurase que recolecta datos, apaga y desconéctate de la app. Esto sólo debe de hacerse por única vez. Ahora conecta por medio de USB el sensor a la Raspberry.
 
 Abre la terminal del raspberry y empieza a configurarla con los siguientes comandos ![.](https://cdn-learn.adafruit.com/assets/assets/000/029/894/original/raspberry_pi_raspi-terminal.png?1453133507)
 
-Prende el sensor por primera vez y conéctate con la apicación de AirCasting; selecciona "Mobile Session". Asegurase que recolecta datos, apaga y desconéctate de la app. Esto sólo debe de hacerse por única vez. Ahora conecta por medio de USB el sensor a la Raspberry.
+
 Escribe los siguientes comandos y di que sí cuando se te pida (y) o (yes)
 
         sudo apt-get update
@@ -35,12 +35,34 @@ Escribe los siguientes comandos y di que sí cuando se te pida (y) o (yes)
         cp settings.json ~/settings.json
         cp shutdown.sh ~/shutdown.sh
         cp sync_time.sh ~/sync_time.sh
-        cp data_logger.py ~/recolector.py
+        cp recolector.py ~/recolector.py
         cd ..
-        chmod 755 data_logger.py sync_time.sh shutdown.sh
+        chmod 755 recolector.py sync_time.sh shutdown.sh
         chmod 766 settings.json
         sudo /etc/init.d/nginx start
         
         
         sudo raspi-config (Network Options > N3 Network interface names > No y que Wlan0 sea el nombre)
         
+Vuelve a abrir la terminal y escribe 
+        sudo nano /etc/nginx/sites-enabled/default
+
+Busca la linea que dice 
+        index index.html index.htm index.nginx-debian.html;
+
+Y agrega index.php, para que ahora sea 
+        index index.php index.html index.htm index.nginx-debian.html;
+
+Si la parte de index.nginx es diferente o no está, no prestes atención a ello, sólo agrega index.php
+
+Ahora, tienes que hacer que descomentar algunas líneas del código, para que se vea así
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+         location ~ \.php$ {
+              include snippets/fastcgi-php.conf;
+
+        #   	 # With php5-cgi alone:
+        #        fastcgi_pass 127.0.0.1:9000;
+        #        # With php7-fpm:
+                 fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+         }
