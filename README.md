@@ -101,8 +101,17 @@ Reinicia la Raspberry y escribe en la terminal
         
 Este último comando te dice la dirección IP de la Raspberry; introdúcelo al navegador web de la rasp y podrás empezar a recolectar los datos al oprimir "Empezar a tomar datos", los cuales se guardarán en un archivo .csv en la carpeta de Downloads cuando oprimas "Stop".
 
-##Referencias
+## Referencias
+
 Raspberry Pi. (n.d.). Retrieved from documentation: https://www.raspberrypi.org/documentation/installation/noobs.md
 
+Bitbucket (n.d.). Markdown syntax guide. Retrieved from https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html
+
 Sam Groveman, J. Y. (n.d.). Airbeam2. Retrieved from http://www.takingspace.org/
+
+Instructables (n.d.). Read and Write from Serial Port with Raspberry Pi. Retrieved from https://www.instructables.com/id/Read-and-write-from-serial-port-with-Raspberry-Pi/
+
+eLinux (n.d.). RPi Serial Connection. Retrieved from https://elinux.org/RPi_Serial_Connection
+
+w3Schools (2018) World's Largest web Developer Site; PHP5. Retrieved from https://www.w3schools.com/php/default.asp
 
