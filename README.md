@@ -100,3 +100,9 @@ Reinicia la Raspberry y escribe en la terminal
         hostname -i
         
 Este último comando te dice la dirección IP de la Raspberry; introdúcelo al navegador web de la rasp y podrás empezar a recolectar los datos al oprimir "Empezar a tomar datos", los cuales se guardarán en un archivo .csv en la carpeta de Downloads cuando oprimas "Stop".
+
+##Referencias
+Raspberry Pi. (n.d.). Retrieved from documentation: https://www.raspberrypi.org/documentation/installation/noobs.md
+
+Sam Groveman, J. Y. (n.d.). Airbeam2. Retrieved from http://www.takingspace.org/
+
