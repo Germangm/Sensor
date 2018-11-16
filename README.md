@@ -23,7 +23,8 @@ Asegúrate que después de la instalación, el Raspberry tenga la fecha y hora c
 
 Abre la terminal del raspberry y empieza a configurarla con los siguientes comandos ![.](https://cdn-learn.adafruit.com/assets/assets/000/029/894/original/raspberry_pi_raspi-terminal.png?1453133507)
 
-Escribe los siguientes comandos y dí que sí cuando se te pida (y) o (yes)
+Prende el sensor por primera vez y conéctate con la apicación de AirCasting; selecciona "Mobile Session". Asegurase que recolecta datos, apaga y desconéctate de la app. Esto sólo debe de hacerse por única vez. Ahora conecta por medio de USB el sensor a la Raspberry.
+Escribe los siguientes comandos y di que sí cuando se te pida (y) o (yes)
 
         sudo apt-get update
         sudo apt-get dist-upgrade
@@ -34,8 +35,12 @@ Escribe los siguientes comandos y dí que sí cuando se te pida (y) o (yes)
         cp settings.json ~/settings.json
         cp shutdown.sh ~/shutdown.sh
         cp sync_time.sh ~/sync_time.sh
-        cp data_logger.py ~/data_logger.py
+        cp data_logger.py ~/recolector.py
         cd ..
         chmod 755 data_logger.py sync_time.sh shutdown.sh
         chmod 766 settings.json
         sudo /etc/init.d/nginx start
+        
+        
+        sudo raspi-config (Network Options > N3 Network interface names > No y que Wlan0 sea el nombre)
+        
