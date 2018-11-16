@@ -56,6 +56,7 @@ Y agrega index.php, para que ahora sea
 Si la parte de index.nginx es diferente o no está, no prestes atención a ello, sólo agrega index.php
 
 Ahora, tienes que hacer que descomentar algunas líneas del código, para que se vea así
+        
         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
         #
          location ~ \.php$ {
