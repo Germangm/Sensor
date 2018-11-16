@@ -28,14 +28,14 @@ Escribe los siguientes comandos y dí que sí cuando se te pida (y) o (yes)
         sudo apt-get update
         sudo apt-get dist-upgrade
         sudo apt-get install nginx php-fpm hostapd isc-dhcp-server python3-serial
-
-                                wget https://github.com/ShVerni/AirBeamLogger/archive/master.zip
-                                unzip master.zip
-                                cd AirBeamLogger-master
-                                cp settings.json ~/settings.json
-                                cp shutdown.sh ~/shutdown.sh
-                                cp sync_time.sh ~/sync_time.sh
-                                cp data_logger.py ~/data_logger.py
-                                cd ..
-                                chmod 755 data_logger.py sync_time.sh shutdown.sh
-                                chmod 766 settings.json
+        wget https://github.com/Germangm/Sensor/archive/master.zip
+        unzip master.zip
+        cd Sensor-master
+        cp settings.json ~/settings.json
+        cp shutdown.sh ~/shutdown.sh
+        cp sync_time.sh ~/sync_time.sh
+        cp data_logger.py ~/data_logger.py
+        cd ..
+        chmod 755 data_logger.py sync_time.sh shutdown.sh
+        chmod 766 settings.json
+        sudo /etc/init.d/nginx start
