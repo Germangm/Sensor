@@ -45,12 +45,15 @@ Escribe los siguientes comandos y di que sí cuando se te pida (y) o (yes)
         sudo raspi-config (Network Options > N3 Network interface names > No y que Wlan0 sea el nombre)
         
 Vuelve a abrir la terminal y escribe 
+        
         sudo nano /etc/nginx/sites-enabled/default
 
 Busca la linea que dice 
+        
         index index.html index.htm index.nginx-debian.html;
 
 Y agrega index.php, para que ahora sea 
+        
         index index.php index.html index.htm index.nginx-debian.html;
 
 Si la parte de index.nginx es diferente o no está, no prestes atención a ello, sólo agrega index.php
