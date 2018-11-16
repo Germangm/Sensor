@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Data Server</title>
+<h1>Recolector de Datos</h1>
 <style>
     body {
         width: 35em;
@@ -103,11 +103,10 @@ $(function() {
 </script>
 </head>
 <body>
-<h1>Welcome to the Data Server</h1>
 <p><a style="font-size: x-large; font-weight: bold;"  href="output.csv">Data File</a></p>
-<p><button onclick="start()">Start Data Logger</button></p>
-<p><button onclick="stop()">Stop Data Logger</button></p>
-<p><button onclick="clear_data()">Clear Data</button></p>
+<p><button onclick="start()">Empezar tomar datos</button></p>
+<p><button onclick="stop()">Stop</button></p>
+<p><button onclick="clear_data()">Clear</button></p>
 <p><button onclick="start_shutdown()">Shutdown</button></p>
 <form id="settings">
 	<p>
@@ -116,12 +115,8 @@ $(function() {
 	</p>
 	<p>
 		<input id="date" type="checkbox" value="date" <?php if ( $settings["date"] == 1 ) echo("checked") ?> onclick="update_settings(1)">
-		Enable date and time stamp.
+		Habilitar fecha y hora.
 	</p>
-	<p>
-                <input id="ntp" type="checkbox" value="ntp" <?php if ( $settings["ntp"] == 1 ) echo("checked") ?> onclick="update_settings(2)">
-                Enable NTP time sync.
-        </p>
 
 </form>
 </body>
