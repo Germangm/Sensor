@@ -19,7 +19,7 @@ La primera vez que inicies la Rasp, verás la siguiente pantalla, donde deberás
 ![ pantalla](https://github.com/raspberrypi/noobs/blob/master/screenshots/os_installed.png)
 
 #### Recolectar datos del sensor
-Asegúrate que después de la instalación, el Raspberry tenga la fecha y hora correcta, para evitar incongruencias en los datos recolectados, ya que el script toma el tiempo del sistema.Prende el sensor por primera vez y conéctate con la apicación de AirCasting; selecciona "Mobile Session". Asegurase que recolecta datos, apaga y desconéctate de la app. Esto sólo debe de hacerse por única vez. Ahora conecta por medio de USB el sensor a la Raspberry.
+Asegúrate que después de la instalación, el Raspberry tenga la fecha y hora correcta, para evitar incongruencias en los datos recolectados, ya que el script toma el tiempo del sistema. Prende el sensor por primera vez y conéctate con la apicación de AirCasting; selecciona "Mobile Session". Asegurase que recolecta datos, apaga y desconéctate de la app. Esto sólo debe de hacerse por única vez. Ahora conecta por medio de USB el sensor a la Raspberry.
 
 Abre la terminal del raspberry y empieza a configurarla con los siguientes comandos ![.](https://cdn-learn.adafruit.com/assets/assets/000/029/894/original/raspberry_pi_raspi-terminal.png?1453133507)
 
